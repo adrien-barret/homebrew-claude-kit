@@ -5,13 +5,13 @@
 class ClaudeKit < Formula
   desc "CLI tool for bootstrapping Claude Code projects with best-practice templates"
   homepage "https://github.com/adrien-barret/claude-kit"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.5/claude-kit-v0.2.5-darwin-amd64.zip"
-      sha256 "fb3fa729382ce28bff05277127d0c4af7d173cc275ab8f033c129d54d1235c4f"
+      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-darwin-amd64.zip"
+      sha256 "b68b50f9816f6995a5e086886b3797fb3b05fbc67dd366b55bd75bbd330c6f97"
 
       define_method(:install) do
         bin.install "ck"
@@ -19,8 +19,8 @@ class ClaudeKit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.5/claude-kit-v0.2.5-darwin-arm64.zip"
-      sha256 "6925533025ccf9e267d27cec7af24703ce53d11edbec93283b6170a128358238"
+      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-darwin-arm64.zip"
+      sha256 "c80649fab15ebd67b4a295d99ce247866f6897c9abee6ed79e46e43cca161768"
 
       define_method(:install) do
         bin.install "ck"
@@ -31,16 +31,16 @@ class ClaudeKit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.5/claude-kit-v0.2.5-linux-amd64.zip"
-      sha256 "126aef53338237762059033c4620a632e99c291a2ed6456dad538def8d70c791"
+      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-linux-amd64.zip"
+      sha256 "6697ca37de0229a26331c037d3e4fd0fcdb37ddb6a1d335d901780f9c6c2b082"
       define_method(:install) do
         bin.install "ck"
         (share/"claude-kit").install "project-template"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.5/claude-kit-v0.2.5-linux-arm64.zip"
-      sha256 "eb72c51844d9da110bac3c66dba024b7c654269ef7cd58ab932f94ce2c7c89bb"
+      url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-linux-arm64.zip"
+      sha256 "6e9befb6f0095b6ef2678c06168ed1c25763865090c6346a5c8bcf9cc7e4992f"
       define_method(:install) do
         bin.install "ck"
         (share/"claude-kit").install "project-template"

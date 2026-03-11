@@ -11,7 +11,7 @@ class ClaudeKit < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-darwin-amd64.zip"
-      sha256 "b68b50f9816f6995a5e086886b3797fb3b05fbc67dd366b55bd75bbd330c6f97"
+      sha256 "3fab41e269a6c389c5716898b1c28712d2447a7f180a7d71c967515910af40d8"
 
       define_method(:install) do
         bin.install "ck"
@@ -20,7 +20,7 @@ class ClaudeKit < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-darwin-arm64.zip"
-      sha256 "c80649fab15ebd67b4a295d99ce247866f6897c9abee6ed79e46e43cca161768"
+      sha256 "69157977e11743933b4a87e2196f263a42ef5a1c235b48e147842a7f9e68eed9"
 
       define_method(:install) do
         bin.install "ck"
@@ -32,7 +32,7 @@ class ClaudeKit < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-linux-amd64.zip"
-      sha256 "6697ca37de0229a26331c037d3e4fd0fcdb37ddb6a1d335d901780f9c6c2b082"
+      sha256 "476126d66772151fdc27ba7dd98579d11cb4301f9ec9b0c57753b72fdc5ecf36"
       define_method(:install) do
         bin.install "ck"
         (share/"claude-kit").install "project-template"
@@ -40,7 +40,7 @@ class ClaudeKit < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrien-barret/claude-kit/releases/download/v0.2.6/claude-kit-v0.2.6-linux-arm64.zip"
-      sha256 "6e9befb6f0095b6ef2678c06168ed1c25763865090c6346a5c8bcf9cc7e4992f"
+      sha256 "be6e91598a6a1a726c757e8e41ba5fdd7f1636304424915686e202d53eaa0546"
       define_method(:install) do
         bin.install "ck"
         (share/"claude-kit").install "project-template"
